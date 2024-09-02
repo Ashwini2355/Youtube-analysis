@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Predict Likes</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #121212;
+            color: #e0e0e0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            background: #1e1e1e;
+            border-radius: 10px;
+            padding: 2rem;
+            width: 90%;
+            max-width: 600px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+            animation: fadeIn 1s ease-in;
+            box-sizing: border-box; /* Ensure padding is included in width/height */
+        }
+
+        h1 {
+            text-align: center;
+            color: #ff6f61;
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem; /* Increased margin for better spacing */
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: bold;
+        }
+
+        .form-group input, .form-group select {
+            width: 100%;
+            padding: 0.75rem;
+            border: 1px solid #333;
+            border-radius: 5px;
+            background: #2a2a2a;
+            color: #e0e0e0;
+            transition: background 0.3s ease, border 0.3s ease;
+            box-sizing: border-box; /* Ensure padding is included in width/height */
+        }
+
+        .form-group input:focus, .form-group select:focus {
+            background: #333;
+            border-color: #ff6f61;
+            outline: none;
+        }
+
+        button {
+            width: 100%;
+            padding: 1rem;
+            border: none;
+            border-radius: 5px;
+            background: #ff6f61;
+            color: #fff;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: background 0.3s ease;
+            box-sizing: border-box; /* Ensure padding is included in width/height */
+        }
+
+        button:hover {
+            background: #e65c50;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(-10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Predict Likes</h1>
+        <form action="predict" method="POST">
+            <div class="form-group">
+                <label for="views">Views</label>
+                <input type="number" id="views" name="views" required>
+            </div>
+            <div class="form-group">
+                <label for="dislikes">Dislikes</label>
+                <input type="number" id="dislikes" name="dislikes" required>
+            </div>
+            <div class="form-group">
+                <label for="comment_count">Comments Count</label>
+                <input type="number" id="comment_count" name="comment_count" required>
+            </div>
+            <div class="form-group">
+                <label for="genre">Genre</label>
+                <select id="genre" name="genre" required>
+                    <option value="" disabled selected>Select Genre</option>
+                    <option value="1">Film & Animation</option>
+                    <option value="2">Autos & Vehicles</option>
+                    <option value="10">Music</option>
+                    <option value="15">Pets & Animals</option>
+                    <option value="17">Sports</option>
+                    <option value="18">Short Movies</option>
+                    <option value="19">Travel & Events</option>
+                    <option value="20">Gaming</option>
+                    <option value="21">Videoblogging</option>
+                    <option value="22">People & Blogs</option>
+                    <option value="23">Comedy</option>
+                    <option value="24">Entertainment</option>
+                    <option value="25">News & Politics</option>
+                    <option value="26">Howto & Style</option>
+                    <option value="27">Education</option>
+                    <option value="28">Science & Technology</option>
+                    <option value="29">Nonprofits & Activism</option>
+                    <option value="30">Movies</option>
+                    <option value="31">Anime/Animation</option>
+                    <option value="32">Action/Adventure</option>
+                    <option value="33">Classics</option>
+                    <option value="34">Comedy</option>
+                    <option value="35">Documentary</option>
+                    <option value="36">Drama</option>
+                    <option value="37">Family</option>
+                    <option value="38">Foreign</option>
+                    <option value="39">Horror</option>
+                    <option value="40">Sci-Fi/Fantasy</option>
+                    <option value="41">Thriller</option>
+                    <option value="42">Shorts</option>
+                    <option value="43">Shows</option>
+                    <option value="44">Trailers</option>
+                </select>
+            </div>
+            <button type="submit">Predict</button>
+        </form>
+    </div>
+</body>
+</html>

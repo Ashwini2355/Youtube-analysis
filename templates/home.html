@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YouTube Analysis Project</title>
+    <style>
+        /* General Styles */
+        body {
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+            background-color: #121212;
+            color: #e0e0e0;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        /* Navigation */
+        header {
+            background-color: #1f1f1f;
+            padding: 15px;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .nav-left, .nav-right {
+            display: flex;
+            align-items: center;
+        }
+
+        .nav-left {
+            gap: 20px;
+        }
+
+        .nav-right {
+            gap: 20px;
+        }
+
+        .nav-list {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            align-items: center;
+        }
+
+        .nav-list li {
+            margin: 0;
+            display: flex;
+            align-items: center;
+        }
+
+        .nav-list a {
+            font-size: 16px;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            transition: color 0.3s ease;
+        }
+
+        .nav-list a:hover {
+            color: #bb86fc;
+        }
+
+        .nav-icon {
+            margin-right: 5px;
+        }
+
+        .gif-frame {
+            margin-bottom: 20px;
+            padding: 10px;
+            border: 5px solid #bb86fc;
+            display: inline-block;
+            border-radius: 10px;
+            background-color: #1f1f1f;
+            max-width: 100%;
+            overflow: hidden;
+        }
+
+        .gif-frame iframe {
+            width: 640px; /* Increase width as needed */
+            height: auto;
+            border: none;
+        }
+
+        /* Hero Section */
+        .hero {
+            height: 100vh;
+            background: linear-gradient(135deg, #1f1f1f, #121212);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding-top: 60px;
+        }
+
+        .hero-content {
+            max-width: 90%;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            animation: fadeInDown 1s ease-out;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+            animation: fadeInUp 1s ease-out;
+        }
+
+        .buttons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            animation: fadeIn 1.5s ease-out;
+        }
+
+        .btn {
+            padding: 12px 30px;
+            font-size: 16px;
+            font-weight: bold;
+            border-radius: 5px;
+            background-color: #3700b3;
+            color: white;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+        .btn:hover {
+            background-color: #6200ea;
+            transform: scale(1.05);
+        }
+
+        /* Animations */
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        /* Footer */
+        footer {
+            background-color: #1f1f1f;
+            text-align: center;
+            padding: 20px 0;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="nav-container">
+            <ul class="nav-list nav-left">
+                <li><a href="#home"><img src="path/to/home-icon.png" class="nav-icon">Home</a></li>
+                <li><a href="#about"><img src="path/to/about-icon.png" class="nav-icon">About</a></li>
+            </ul>
+            <ul class="nav-list nav-right">
+                <li><a href="#sign-in"><img src="path/to/sign-in-icon.png"  class="nav-icon">Sign In</a></li>
+                <li><a href="#try-for-free"><img src="path/to/try-for-free-icon.png"  class="nav-icon">Try for Free</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="hero-content">
+                <!-- GIF Frame -->
+                <div class="gif-frame">
+                    <iframe src="https://giphy.com/embed/9c5RVG183bu906Vcdt" width="640" height="640" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
+                </div>
+                <h1>Welcome to YouTube Analysis Project</h1>
+                <p>Explore our tools and features to analyze and predict YouTube data.</p>
+                <div class="buttons">
+                    <a href="analytical" class="btn">YouTube Analytics</a>
+                    <a href="predict" class="btn">Like Predictor</a>
+                    <a href="contact" class="btn">Contact Us</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 YouTube Analysis Project. All rights reserved.</p>
+    </footer>
+</body>
+</html>
